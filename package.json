@@ -1,5 +1,5 @@
 {
-    "name": "hbq-mongo-model-statics",
+    "name": "mongo-model-statics",
     "version": "1.0.1",
     "description": "mongoose 通用静态方法",
     "main": "build/index.js",
