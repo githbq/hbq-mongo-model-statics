@@ -3,7 +3,6 @@
  */
 import * as  escapeStringRegexp from 'escape-string-regexp'
 import * as momentHelper from 'moment-helper'
-import * as Q from 'q'
 export default {
     keyWord: '$',
     /**
@@ -100,7 +99,7 @@ export default {
         }
         countPromise = countPromise.exec()
         pagePromise = pagePromise.exec()
-        return Q.all([countPromise, pagePromise]).spread((count, page) => { //两函数返回的两个值
+        return Promise.all([countPromise, pagePromise]).then(([count, page]) => { //两函数返回的两个值
             return { total: count, list: page, pageIndex: param.pageIndex, pageSize: param.pageSize }
         })
     },
@@ -120,26 +119,18 @@ export default {
         return this.remove(param.condition).exec()
     },
     _add(data) {
-        data.createTime = (new Date()).getTime()
-        data.updateTime = (new Date()).getTime()
-        data.createTimeString = momentHelper.get(data.createTime)
-        data.updateTimeString = momentHelper.get(data.updateTime)
         let model = new this(data)
         return model.save()
     },
     _update(condition, updateData, option) {
-        let deferred = Q.defer()
-        delete updateData.createTime
-        delete updateData.createTimeString
-        updateData.updateTime = (new Date()).getTime()
-        updateData.updateTimeString = momentHelper.get(updateData.updateTime)
-        this.update(condition, updateData, option || { multi: true }, (err, data) => {
-            if (err) {
-                deferred.reject(err)
-            } else {
-                deferred.resolve(data)
-            }
+        return new Promise((resolve, reject) => {
+            this.update(condition, updateData, option || { multi: true }, (err, data) => {
+                if (err) {
+                    reject(err)
+                } else {
+                    resolve(data)
+                }
+            })
         })
-        return deferred.promise
     }
 }

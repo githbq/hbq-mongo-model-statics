@@ -1,6 +1,6 @@
 {
     "name": "mongo-model-statics",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "description": "mongoose 通用静态方法",
     "main": "build/index.js",
     "scripts": {
@@ -31,7 +31,6 @@
     "dependencies": {
         "escape-string-regexp": "^1.0.5",
         "moment-helper": "^0.0.1",
-        "q": "^1.5.0",
         "tslib": "^1.6.1"
     },
     "devDependencies": {
