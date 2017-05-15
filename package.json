@@ -1,39 +1,50 @@
 {
-  "name": "hbq-mongo-model-statics2",
-  "version": "0.0.1",
-  "description": "hbq-mongo-model-statics2",
-  "main": "build/index.js",
-  "scripts": {
-    "start:build": "npm run clear && node build",
-    "start": "node run",
-    "test": "mocha src/**/*.test.ts",
-    "clear": "rimraf build",
-    "tsc": "npm run clear && tsc",
-    "tsc:w": "npm run clear && tsc -w",
-    "p": "npm run tsc && npm publish",
-    "lint": "tslint \"src/**/*.ts\""
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/githbq/hbq-module-boilerplate.git"
-  },
-  "keywords": ["typescript", "hbq-mongo-model-statics2"],
-  "author": "hubiqing",
-  "license": "MIT",
-  "bugs": {"url": "https://github.com/githbq/hbq-module-boilerplate.git"},
-  "homepage": "https://github.com/githbq/hbq-module-boilerplate.git#readme",
-  "dependencies": {"lodash": "^4.17.4", "tslib": "^1.6.1"},
-  "devDependencies": {
-    "@types/lodash": "^4.14.64",
-    "@types/mocha": "^2.2.41",
-    "@types/node": "^6.0.48",
-    "@types/should": "^8.3.0",
-    "mocha": "^3.3.0",
-    "rimraf": "^2.6.1",
-    "should": "^11.2.1",
-    "ts-node": "^3.0.2",
-    "tslint": "^5.1.0",
-    "typescript": "^2.3.2"
-  },
-  "engines": {"node": ">=7.6"}
+    "name": "hbq-mongo-model-statics",
+    "version": "1.0.1",
+    "description": "mongoose 通用静态方法",
+    "main": "build/index.js",
+    "scripts": {
+        "start:build": "npm run clear && node build",
+        "start": "node run",
+        "test": "mocha src/**/*.test.ts",
+        "clear": "rimraf build",
+        "tsc": "npm run clear && tsc",
+        "tsc:w": "npm run clear && tsc -w",
+        "p": "npm run tsc && npm publish",
+        "lint": "tslint \"src/**/*.ts\""
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/githbq/hbq-mongo-model-statics.git"
+    },
+    "keywords": [
+        "mongo",
+        "typescript",
+        "hbq-mongo-model-statics"
+    ],
+    "author": "hubiqing",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/githbq/hbq-mongo-model-statics.git"
+    },
+    "homepage": "https://github.com/githbq/hbq-mongo-model-statics.git#readme",
+    "dependencies": {
+        "escape-string-regexp": "^1.0.5",
+        "moment-helper": "^0.0.1",
+        "q": "^1.5.0",
+        "tslib": "^1.6.1"
+    },
+    "devDependencies": {
+        "@types/lodash": "^4.14.64",
+        "@types/mocha": "^2.2.41",
+        "@types/node": "^6.0.48",
+        "@types/should": "^8.3.0",
+        "mocha": "^3.3.0",
+        "rimraf": "^2.6.1",
+        "should": "^11.2.1",
+        "ts-node": "^3.0.2",
+        "tslint": "^5.1.0",
+        "typescript": "^2.3.2"
+    },
+    "engines": {"node": ">=7.6"}
 }

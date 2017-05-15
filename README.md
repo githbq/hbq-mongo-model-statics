@@ -1,5 +1,5 @@
-#  模块名称 
-## 描述 
+#  mongo-model-statics
+##  mongo-model-statics mongoose 通用静态方法
 1. 简介1 
 2. 简介2 
 
