@@ -20,6 +20,9 @@ export default {
             const startWith = n.startsWith(n, this.keyWord)
             const endWith = n.endsWith(n, this.keyWord)
             const value = condition[n]
+            if (typeof value !== 'string') {
+                return
+            }
             //实际的key
             let newKey
             //正则串
