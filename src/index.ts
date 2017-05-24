@@ -125,10 +125,10 @@ export default {
         let model = new this(data)
         return model.save()
     },
-    _update(condition, updateData, option) {
+    _update(condition, updateData, options?) {
         return new Promise((resolve, reject) => {
             delete updateData._id
-            this.update(condition, { $set: updateData }, option || { multi: true }, (err, data) => {
+            this.update(condition, updateData, { multi: true, ...options }, (err, data) => {
                 if (err) {
                     reject(err)
                 } else {
