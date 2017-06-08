@@ -127,7 +127,6 @@ export default {
     },
     _update(condition, updateData, options?) {
         return new Promise((resolve, reject) => {
-            delete updateData._id
             this.update(condition, updateData, { multi: true, ...options }, (err, data) => {
                 if (err) {
                     reject(err)
