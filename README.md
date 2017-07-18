@@ -2,7 +2,7 @@
 ##  mongo-model-statics mongoose 通用静态方法
  
 
-## 关键字
+## 关键字
 - `param` 参数,结构:`{condition:{}}` condition:为具体查询条件    
 - 所有接口返回的都是promise
 - 查询条件会走一个过滤规则  
