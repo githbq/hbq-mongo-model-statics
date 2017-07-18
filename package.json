@@ -1,6 +1,6 @@
 {
     "name": "mongo-model-statics",
-    "version": "1.0.9",
+    "version": "1.0.10",
     "description": "mongoose 通用静态方法",
     "main": "build/index.js",
     "scripts": {
@@ -30,7 +30,6 @@
     "homepage": "https://github.com/githbq/hbq-mongo-model-statics.git#readme",
     "dependencies": {
         "escape-string-regexp": "^1.0.5",
-        "moment-helper": "^0.0.1",
         "tslib": "^1.6.1"
     },
     "devDependencies": {

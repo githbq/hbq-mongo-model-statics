@@ -1,8 +1,7 @@
 /** 
  * mongoose 模型静态方法
  */
-import * as  escapeStringRegexp from 'escape-string-regexp'
-import * as momentHelper from 'moment-helper'
+import * as  escapeStringRegexp from 'escape-string-regexp' 
 export default {
     keyWord: '$',
     /**
