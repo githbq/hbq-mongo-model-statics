@@ -80,9 +80,9 @@ export default {
      * 分页方法 最小页标是1  默认页面大小是10
      * @param {*参数} param 
      * @param {*查询数据回调} callback 
-     * @param {*查询数据条数回调} countcallback 
+     * @param {*查询数据条数回调} countCallback 
      */
-    _getPage(param, callback, countcallback) {
+    _getPage(param, callback, countCallback) {
         param = this._paramPreprocess(param)
         param.pageIndex = parseInt(param.pageIndex || 1) //默认页是第1 页
         param.pageIndex = param.pageIndex < 1 ? 1 : param.pageIndex //最小页码是1
@@ -100,8 +100,8 @@ export default {
         if (callback) {
             pagePromise = callback(pagePromise) || pagePromise
         }
-        if (countcallback) {
-            countPromise = countcallback(countPromise) || countPromise
+        if (countCallback) {
+            countPromise = countCallback(countPromise) || countPromise
         }
         countPromise = countPromise.exec()
         pagePromise = pagePromise.exec()

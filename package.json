@@ -1,6 +1,6 @@
 {
     "name": "mongo-model-statics",
-    "version": "1.0.13",
+    "version": "1.0.14",
     "description": "mongoose 通用静态方法",
     "main": "build/index.js",
     "scripts": {
