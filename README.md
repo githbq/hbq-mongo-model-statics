@@ -20,7 +20,7 @@
  -  `_getPage(param, callback, countcallback)  `
  -  param:`{pageSize,pageIndex,condition}`
  -  callback   对查询出来的promise进行二次定制
- -  对查询数据的promise进行二次定帛
+ -  countcallback 对查询数量的promise进行二次定帛
  -  返回`Promise<{ total, list, pageIndex, pageSize}>`
 
 ### 查询数据   
