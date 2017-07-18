@@ -1,15 +1,46 @@
-#  mongo-model-statics
+>  mongo-model-statics
 ##  mongo-model-statics mongoose 通用静态方法
-1. 简介1 
-2. 简介2 
+ 
 
-![my love](./logo.png) 
-## 启动 
-- npm start  
+## 关键字
+-   `param` 参数,结构:`{condition:{}}` condition:为具体查询条件    
+-   所有接口返回的都是promise
+## 方法 
 
-## 安装 
-- yarn 
+### 根据参数获取查询数据的数量
 
-## test 测试    
-- npm run test     
+- `_getCount(param)  promise<int>`
 
+### 获取分页数据
+ -  `_getPage(param, callback, countcallback)  `
+ -  param:`{pageSize,pageIndex,condition}`
+ -  callback   对查询出来的promise进行二次定制
+ -  对查询数据的promise进行二次定帛
+ -  返回`Promise<{ total, list, pageIndex, pageSize}>`
+
+### 查询数据   
+
+-   `_find(param)  Promise<[]>` 
+
+### 查询单条数据  
+
+-   `_findOne(param) Promise<Object>`
+
+### 根据id查询数据 id可以是字符串   
+
+-   `_findById(id)  Promise<Object>`
+
+### 根据参数删除数据
+
+-   `_delete(param)`
+
+### 新增数据
+
+-   `_add(data)`
+-   data:数据自身
+
+### 更新数据
+
+-   `_update(condition, updateData, options?)`
+-   updateData:将更新的数据
+-   options:可选 默认:`{ multi: true,...options}`

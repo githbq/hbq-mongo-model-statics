@@ -67,6 +67,10 @@ export default {
         param.condition = this._conditionProcess(param.condition)
         return param
     },
+    /**
+     * 获取数据的数量
+     * @param param 参数
+     */
     _getCount(param) {
         param = this._paramPreprocess(param)
         return this
