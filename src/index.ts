@@ -1,7 +1,7 @@
 /** 
  * mongoose 模型静态方法
  */
-import * as  escapeStringRegexp from 'escape-string-regexp' 
+import * as  escapeStringRegexp from 'escape-string-regexp'
 export default {
     keyWord: '$',
     /**
@@ -16,8 +16,8 @@ export default {
             return new RegExp(regStr, 'i')
         }
         keys.forEach((n) => {
-            const startWith = n.startsWith(n, this.keyWord)
-            const endWith = n.endsWith(n, this.keyWord)
+            const startWith = n.startsWith(this.keyWord)
+            const endWith = n.endsWith(this.keyWord)
             const value = condition[n]
             if (typeof value !== 'string') {
                 return
